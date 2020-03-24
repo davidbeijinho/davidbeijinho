@@ -11,7 +11,7 @@ import React from "react"
 // import Subscribe from "../components/Subscribe"
 // import Post from "../components/Post"
 import me from "../images/david_square.jpeg";
-
+import "./index.css"
 
 const IndexPage = () => (
   <div
