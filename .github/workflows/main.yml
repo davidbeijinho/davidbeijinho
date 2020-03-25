@@ -49,5 +49,5 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
-        source: "public/"
+        source: "public/*"
         target: "/root/test/"
