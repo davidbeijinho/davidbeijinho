@@ -24,13 +24,13 @@ jobs:
     - run: npm test
       env:
         CI: true
-    - name: Display the path
+    - name: Display the files
       run: "ls -la"
       shell: bash
     - uses: actions/upload-artifact@v1
       with:
         name: build
-        path: "public/**"
+        path: "public/"
   deploy:
     needs: build
     runs-on: ubuntu-latest
@@ -39,6 +39,9 @@ jobs:
       uses: actions/download-artifact@v1
       with:
         name: build
+    - name: Display the files
+      run: "ls -la"
+      shell: bash
     - name: copy file via ssh password
       uses: appleboy/scp-action@master
       with:
