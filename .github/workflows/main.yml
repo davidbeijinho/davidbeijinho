@@ -30,7 +30,7 @@ jobs:
     - uses: actions/upload-artifact@v1
       with:
         name: build
-        path: "public/"
+        path: "public"
   deploy:
     needs: build
     runs-on: ubuntu-latest
@@ -49,5 +49,5 @@ jobs:
         username: ${{ secrets.USERNAME }}
         port: ${{ secrets.PORT }}
         key: ${{ secrets.KEY }}
-        source: "build/"
-        target: "/root/test/"
+        source: "build"
+        target: "/root/test"
